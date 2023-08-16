@@ -1,10 +1,20 @@
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Main from "./pages/Main";
+import Login from "./pages/Login";
 
 function App() {
   return (
-    <div className="text-5xl underline">
-      hello, test cicd ok
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/quiz" element={<Main />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

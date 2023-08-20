@@ -62,12 +62,12 @@ function Footer() {
             <h2 className="mb-6 text-sm font-semibold uppercase ">Legal</h2>
             <ul>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   Terms &amp; Conditions
                 </a>
               </li>
@@ -90,16 +90,9 @@ function Footer() {
               ADMIN
             </a>
           </span>
-          <span>
-            © 2023{" "}
-            <Link to="/" className="hover:underline">
-              Quizzy.
-            </Link>
-            &ensp;All Rights Reserved.
-          </span>
         </div>
         <div className="mx-auto mt-4 flex w-fit space-x-6 sm:justify-center md:mx-0 md:mt-0">
-          <a href="#">
+          <a href="/">
             <svg
               className="h-5 w-5 dark:fill-lightText"
               viewBox="0 0 24 24"
@@ -113,7 +106,7 @@ function Footer() {
             </svg>
             <span className="sr-only">Facebook page</span>
           </a>
-          <a href="#">
+          <a href="/">
             <svg
               className="h-5 w-5 dark:fill-lightText"
               viewBox="0 0 24 24"
@@ -127,7 +120,7 @@ function Footer() {
             </svg>
             <span className="sr-only">Instagram page</span>
           </a>
-          <a href="#">
+          <a href="/">
             <svg
               className="h-5 w-5 dark:fill-lightText"
               viewBox="0 0 24 24"

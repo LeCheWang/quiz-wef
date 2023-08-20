@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .header-left img {
@@ -75,13 +76,15 @@
 }
 
 .menu-item {
+  width: 200px;
   background-color: #964dc4cc;
   position: absolute;
-  bottom: -400%;
+  bottom: -380%;
   right: 0;
   opacity: 1;
   transition: all 0.5s ease-in-out;
   display: none;
+  text-align: left;
 }
 
 .menu-item p {
@@ -97,4 +100,17 @@
 
 .menu-item p:hover {
   background-color: var(--purple-color);
+}
+
+.item-btn .border-btn {
+  padding: 5px 12px;
+  margin: 0 5px;
+  border: 1px solid var(--main-color);
+  background: linear-gradient(to right, #a972cb 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+.item-btn .border-btn:hover {
+  background-position: left bottom;
 }

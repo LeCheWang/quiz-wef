@@ -14,12 +14,21 @@ import { useNavigate } from "react-router-dom";
 
 export default function HomeMain() {
   const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem("myQuizApp"));
+
+  const handleStartQuiz = () => {
+    if (user) {
+      navigate("/quiz");
+    } else {
+      navigate("/login");
+    }
+  };
 
   return (
     <div className="home-main">
       <div className="banner">
         <div className="main-banner">
-          <div className="btn-start" onClick={() => navigate("/quiz")}>
+          <div className="btn-start" onClick={handleStartQuiz}>
             Start
           </div>
           <div className="main-banner__title">

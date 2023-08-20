@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   Box,
-  Typography,
   FormControl,
   InputLabel,
   OutlinedInput,
@@ -10,14 +9,22 @@ import {
 } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/header/Header";
-import login from "../asset/images/login.png";
-import { MailOutline, Visibility, VisibilityOff } from "@mui/icons-material";
+import signupImage from "../asset/images/signup.png";
+import {
+  LockOutlined,
+  MailOutline,
+  Person2Outlined,
+  Visibility,
+  VisibilityOff,
+} from "@mui/icons-material";
 
-export default function Login() {
+export default function Signup() {
   const navigate = useNavigate();
-  const [loginData, setLoginData] = useState({
+  const [signupData, setSignupData] = useState({
+    username: "",
     email: "",
     password: "",
+    confirmPassword: "",
   });
   const [showPassword, setShowPassword] = useState(false);
 
@@ -27,25 +34,19 @@ export default function Login() {
     e.preventDefault();
   };
 
-  const handleLogin = () => {
-    // handle api?
-    const data = {
-      email: loginData.email,
-      password: loginData.password,
-    };
-    if (loginData.email !== " " && loginData.password !== "") {
-      localStorage.setItem("myQuizApp", JSON.stringify(data));
-      navigate("/");
-    }
+  const handleSignup = () => {
+    // call api
+    console.log(signupData);
+    navigate("/");
   };
 
   return (
     <div>
       <Header />
-      <div className="login-page">
-        <h1 className="login-page__title">LOG IN TO QUIZZY!</h1>
-        <div className="login-page__main">
-          <img src={login} alt="Log In" />
+      <div className="signup-page">
+        <h1 className="signup-page__title">CREATE AN ACCOUNT!</h1>
+        <div className="signup-page__main">
+          <img src={signupImage} alt="Signup" />
           <div>
             <Box
               sx={{
@@ -58,15 +59,36 @@ export default function Login() {
               }}
             >
               <FormControl sx={{ width: "100%", my: 2 }} variant="outlined">
+                <InputLabel htmlFor="outlined-adornment-username">
+                  Username
+                </InputLabel>
+                <OutlinedInput
+                  id="outlined-adornment-username"
+                  type="email"
+                  value={signupData.username}
+                  onChange={(e) =>
+                    setSignupData({ ...signupData, username: e.target.value })
+                  }
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton edge="end">
+                        <Person2Outlined />
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  label="Email"
+                />
+              </FormControl>
+              <FormControl sx={{ width: "100%", my: 2 }} variant="outlined">
                 <InputLabel htmlFor="outlined-adornment-email">
                   Email
                 </InputLabel>
                 <OutlinedInput
                   id="outlined-adornment-email"
                   type="email"
-                  value={loginData.email}
+                  value={signupData.email}
                   onChange={(e) =>
-                    setLoginData({ ...loginData, email: e.target.value })
+                    setSignupData({ ...signupData, email: e.target.value })
                   }
                   endAdornment={
                     <InputAdornment position="end">
@@ -85,9 +107,9 @@ export default function Login() {
                 <OutlinedInput
                   id="outlined-adornment-password"
                   type={showPassword ? "text" : "password"}
-                  value={loginData.password}
+                  value={signupData.password}
                   onChange={(e) =>
-                    setLoginData({ ...loginData, password: e.target.value })
+                    setSignupData({ ...signupData, password: e.target.value })
                   }
                   endAdornment={
                     <InputAdornment position="end">
@@ -104,17 +126,36 @@ export default function Login() {
                   label="Password"
                 />
               </FormControl>
-              <Typography
-                sx={{ textAlign: "right", color: "#3b82f6", fontSize: "18px" }}
-              >
-                Forgot Password?
-              </Typography>
-              <div className="login-btn" onClick={handleLogin}>
-                log in
+              <FormControl sx={{ width: "100%", my: 2 }} variant="outlined">
+                <InputLabel htmlFor="outlined-adornment-confirmPass">
+                  Confirm password
+                </InputLabel>
+                <OutlinedInput
+                  id="outlined-adornment-confirmPass"
+                  type="password"
+                  value={signupData.confirmPassword}
+                  onChange={(e) =>
+                    setSignupData({
+                      ...signupData,
+                      confirmPassword: e.target.value,
+                    })
+                  }
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton edge="end">
+                        <LockOutlined />
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  label="Confirm password"
+                />
+              </FormControl>
+              <div className="signup-btn" onClick={handleSignup}>
+                sign up
               </div>
-              <div className="user-signup">
-                Don&apos;t have an account?
-                <Link to="/signup">
+              <div className="user-login">
+                Already have an account?
+                <Link to="/login">
                   <span
                     style={{
                       color: "#3b82f6",
@@ -122,7 +163,7 @@ export default function Login() {
                     }}
                   >
                     {" "}
-                    Sign Up{" "}
+                    Login{" "}
                   </span>
                 </Link>
                 instead.

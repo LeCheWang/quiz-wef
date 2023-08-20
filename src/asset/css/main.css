@@ -2,6 +2,10 @@
 @import "./common/home_main.css";
 @import "./common/quiz_card.css";
 @import "./common/footer.css";
+@import "./common/quiz_main.css";
+@import "./common/result.css";
+@import "./common/login.css";
+@import "./common/signup.css";
 
 :root {
   --main-bg: rgb(246 249 252);

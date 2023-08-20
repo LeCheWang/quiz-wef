@@ -26,7 +26,7 @@ function ProgressBar({ nextQ, prevQ, progress, submit }) {
 
       <div className="w-full rounded-full bg-gray-300 dark:bg-gray-600">
         <div
-          className="rounded-full bg-green-500 text-center text-xs font-medium leading-none tracking-wider dark:bg-black transition-all duration-500 ease-in
+          className="rounded-full bg-green-500 text-center text-xs font-medium leading-none tracking-wider transition-all duration-500 ease-in
           lg:text-sm"
           title={`${progress.toFixed(0)}%`}
           style={{ width: `${progress.toFixed(0)}%` }}

@@ -83,12 +83,30 @@ export default function QuizMain() {
     if (currentQuestion >= 1 && currentQuestion <= listQuiz?.length) {
       setCurrentQuestion((curr) => curr - 1);
     }
-    if (listQuiz[currentQuestion - 1]?.topic === "general_knowledge") {
+
+    if (
+      listQuiz[currentQuestion - 1]?.topic === "general_knowledge" ||
+      currentQuestion <= 0
+    ) {
       setTopics("general_knowledge");
     } else if (listQuiz[currentQuestion - 1]?.topic === "mathematics") {
       setTopics("mathematics");
     } else {
       setTopics("computer_technology");
+    }
+    // not allow to go back when the topic is over
+    if (
+      listQuiz[currentQuestion - 1]?.topic === "general_knowledge" &&
+      currentQuestion === 5
+    ) {
+      setTopics("general_knowledge");
+      setCurrentQuestion((curr) => curr + 1);
+    } else if (
+      listQuiz[currentQuestion - 1]?.topic === "mathematics" &&
+      currentQuestion === 10
+    ) {
+      setTopics("mathematics");
+      setCurrentQuestion((curr) => curr + 1);
     }
   }, [currentQuestion, listQuiz]);
 
@@ -253,7 +271,7 @@ export default function QuizMain() {
             listQuiz?.length > 0 && (
               <div className="quiz-main__mid frame-BG rounded-md">
                 <div className="flex flex-col items-center justify-center text-xl font-bold text-darkText dark:text-lightText sm:text-3xl">
-                  Q. {listQuiz[currentQuestion]?.title}
+                  Câu {currentQuestion + 1}. {listQuiz[currentQuestion]?.title}
                 </div>
                 <hr className="mt-3 mb-8 h-px border-0 bg-gray-400 dark:bg-gray-600" />
 

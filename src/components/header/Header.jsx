@@ -32,7 +32,7 @@ export default function Header() {
         <div className="header-right__menu">
           <p onClick={() => navigate("/")}>home</p>
           <p onClick={() => navigate("/quiz")}>quizzies</p>
-          <p>about</p>
+          <p onClick={() => navigate("/about")}>about</p>
         </div>
         <div className="header-right__icon">
           {user ? (

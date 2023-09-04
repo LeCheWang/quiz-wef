@@ -1,18 +1,6 @@
 import React from "react";
 import Header from "../components/header/Header";
 
-const aboutPageData = [
-  `Welcome to Quizzy, the premier destination for free coding quizzes! Our goal is to provide you with a fun and challenging way to test your coding knowledge and skills. We offer a wide range of quizzes covering various programming languages, algorithms, data structures, and more. `,
-
-  `At Quizzy, we believe that learning to code should be accessible to everyone, which is why we offer all of our quizzes for free. Whether you're a beginner or an experienced programmer, our quizzes are designed to help you improve your skills and stay up-to-date with the latest trends in the coding domain.`,
-
-  `We offer a variety of quizzes that are designed to challenge you at every level. From multiple-choice questions to coding challenges, our quizzes are designed to test your knowledge in a fun and engaging way. Quizzy provide immediate feedback on users answers, helping them to learn and improve their knowledge. For that reason Quizzy can be used for educational purposes or just for entertainment. And most interestingly all of these features are accessible for free. In addition to providing free coding quizzes, Quizzy also offers a wealth of resources for coders of all levels. Our website features helpful tutorials, tips and tricks, and guides to help you improve your coding skills. We believe that everyone should have access to quality coding education, regardless of their experience or financial situation.`,
-
-  `Our team of expert coders and educators work tirelessly to create and curate high-quality quizzes and resources that are both challenging and informative. Our quizzes are updated regularly to reflect the latest trends and technologies in the coding domain, so you can be sure that you're learning the most up-to-date information.`,
-
-  `Thank you for choosing Quizzy as your go-to source for free coding quizzes and resources. We hope you enjoy learning and growing with us!`,
-];
-
 export default function About() {
   return (
     <div>
@@ -22,15 +10,54 @@ export default function About() {
           className="pt-24 font-bold uppercase text-5xl"
           style={{ color: "#562970", letterSpacing: "0.25rem" }}
         >
-          About Quizzy
+          Về Quizzy chúng tôi
         </h1>
-
         <div className="text-justify font-medium sm:w-[70%] sm:text-xl">
-          {aboutPageData.map((para, index2) => (
-            <p className="my-6 indent-7" key={index2}>
-              {para}
-            </p>
-          ))}
+          <p className="my-6 indent-7">
+            Tổ chức WebSter là tổ chức hàng đầu thế giới về Oil-Gas Company.
+            Chúng tôi có nhiều chi nhánh trên khắp thế giới. Nó có nhiều trái
+            phiếu với các công ty đa quốc gia khác nha. Trên những chặng đường
+            đã qua, Tổng Công ty và các đơn vị thành viên đã không ngừng trưởng
+            thành. “Mục tiêu lớn, đòi hỏi những nỗ lực lớn” là mục tiêu toàn thể
+            tập thể lãnh đạo Tổ chức WebSter đều thấu hiểu. Với nền tảng vững
+            chắc đã tạo dựng trên chặng đường phát triển và sự quyết tâm cực kỳ
+            cao quyết tâm tiếp tục khắc ghi những dấu ấn trên chặng đường mới,
+            góp phần vào sự phát triển chung của của nề kinh tế chung toàn cầu.
+          </p>
+          <p className="my-6 indent-7">
+            Quy mô Tập đoàn:
+            <div>
+              <p className="my-2">
+                - Tổng tài sản hợp nhất đến nay là 500 tỷ USD
+              </p>
+              <p className="my-2">
+                - Nguồn vốn chủ sở hữu hợp nhất đến nay là 300 tỷ USD
+              </p>
+              <p className="my-2">
+                <p className="text-left">
+                  - Đội ngũ gần 600.000 thành viên của WebSter với năng lực
+                  chuyên môn cao cùng tinh thần trách nhiệm, tính kỷ luật, sự
+                  chuyên nghiệp và khả năng sáng tạo không ngừng, đã xây dựng
+                  nên một hệ thống công nghiệp dầu khí hoàn chỉnh, đồng bộ chuỗi
+                  khép kín các hoạt động từ tìm kiếm, thăm dò, khai thác tới tồn
+                  trữ, vận chuyển và chế biến với 5 lĩnh vực:
+                </p>
+                <ul style={{ listStyle: "disc" }} className="ml-12 mt-2">
+                  <li className="my-2">
+                    Tìm kiếm, thăm dò và khai thác dầu khí
+                  </li>
+                  <li className="my-1">Công nghiệp khí</li>
+                  <li className="my-1">Chế biến dầu khí</li>
+                  <li className="my-1">
+                    Công nghiệp điện và năng lượng tái tạo
+                  </li>
+                  <li className="my-1">
+                    Dịch vụ kỹ thuật Dầu khí chất lượng cao
+                  </li>
+                </ul>
+              </p>
+            </div>
+          </p>
         </div>
       </div>
     </div>

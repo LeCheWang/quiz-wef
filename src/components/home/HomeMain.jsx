@@ -14,56 +14,47 @@ import { useNavigate } from "react-router-dom";
 
 export default function HomeMain() {
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem("myQuizApp"));
-
-  const handleStartQuiz = () => {
-    if (user) {
-      navigate("/quiz");
-    } else {
-      navigate("/login");
-    }
-  };
 
   return (
     <div className="home-main">
       <div className="banner">
         <div className="main-banner">
-          <div className="btn-start" onClick={handleStartQuiz}>
-            Start
-          </div>
-          <div className="main-banner__title">
-            <h1>THE GREATEST</h1>
-            <h1>QUIZ COMPETITION</h1>
-            <h1>PLATFORM YOU HAVE EVER SEEN!</h1>
+          <div className="btn-start" onClick={() => navigate("/quiz")}>
+            Bắt đầu
           </div>
         </div>
-        <div className="main-banner__titleBot">
-          <h3>
-            " QUIZZES ARE LIKE A MENTAL WORKOUT, EXCEPT YOU DON'T NEED TO BREAK
-            A SWEAT! "
-          </h3>
+      </div>
+      <div className="main-banner__titleBot">
+        <div className="">
+          <h1>THE GREATEST</h1>
+          <h1>QUIZ COMPETITION</h1>
+          <h1>PLATFORM YOU HAVE EVER SEEN!</h1>
         </div>
+        <h3>
+          " QUIZZES ARE LIKE A MENTAL WORKOUT, EXCEPT YOU DON'T NEED TO BREAK A
+          SWEAT! "
+        </h3>
       </div>
       <div className="stats">
         <div className="plus-item">
           <h1>200+</h1>
-          <p>questions</p>
+          <p>câu hỏi</p>
         </div>
         <div className="plus-item">
           <h1>100+</h1>
-          <p>quizzies</p>
+          <p>câu đố</p>
         </div>
         <div className="plus-item">
           <h1>150+</h1>
-          <p>lectures</p>
+          <p>bài học</p>
         </div>
         <div className="plus-item">
           <h1>400+</h1>
-          <p>learners</p>
+          <p>người học</p>
         </div>
       </div>
       <div className="why-quizzy">
-        <h1>WHY QUIZZY?</h1>
+        <h1>Tại sao chọn QUIZZY?</h1>
         <div className="why-quizzy__card">
           <CardQuizzy
             icon={
@@ -74,9 +65,9 @@ export default function HomeMain() {
                 }}
               />
             }
-            title={"Wide Range of Topics"}
+            title={"Nhiều chủ để"}
             content={
-              "We provide a diverse selection of quizzes on a wide range of topics. Whatever computer science topics you are looking for, want to improve your general knowledge, or have a particular interest, you can find quizzes that cater to your needs."
+              "Chúng tôi cung cấp nhiều lựa chọn câu hỏi đa dạng về nhiều chủ đề. Bất kể chủ đề khoa học máy tính nào bạn đang tìm kiếm, muốn nâng cao kiến thức chung hoặc có mối quan tâm đặc biệt, bạn đều có thể tìm thấy các câu đố đáp ứng nhu cầu của mình."
             }
           />
           <CardQuizzy
@@ -88,9 +79,9 @@ export default function HomeMain() {
                 }}
               />
             }
-            title={"Video Content"}
+            title={"Nội dung video"}
             content={
-              "We also provide video content to help you learn topics. As video is an effective way to enhance your learning experience and gain a deeper understanding of topics. Our videos are informative, and easy to follow, allowing you to learn at your own pace."
+              "Chúng tôi cũng cung cấp nội dung video để giúp bạn tìm hiểu các chủ đề. Vì video là một cách hiệu quả để nâng cao trải nghiệm học tập của bạn và hiểu sâu hơn về các chủ đề. Video của chúng tôi chứa nhiều thông tin và dễ theo dõi, cho phép bạn học theo tốc độ của riêng mình. "
             }
           />
           <CardQuizzy
@@ -102,21 +93,24 @@ export default function HomeMain() {
                 }}
               />
             }
-            title={"Verified Certificate"}
+            title={"Chứng chỉ được xác minh"}
             content={
-              "We provide the option to obtain a verified certificate upon completion of a quiz. This certificate validates your knowledge and demonstrates your commitment to learning and self-improvement. This can be used in CVs, resumes to highlight your skills."
+              "Chúng tôi cung cấp tùy chọn nhận chứng chỉ đã được xác minh sau khi hoàn thành bài kiểm tra. Chứng chỉ này xác nhận kiến thức của bạn và thể hiện cam kết học tập và hoàn thiện bản thân của bạn. Chứng chỉ này có thể được sử dụng trong CV, sơ yếu lý lịch để nêu bật các kỹ năng của bạn."
             }
           />
         </div>
+        <div className="see-more" onClick={() => navigate("/about")}>
+          Xem thêm...
+        </div>
       </div>
       <div className="contact-us">
-        <h1>CONTACT US</h1>
+        <h1>Liện hệ với chúng tôi</h1>
         <div className="contact-us__main">
-          <InputField label={"Name"} icon={<Person2Outlined />} />
+          <InputField label={"Họ tên"} icon={<Person2Outlined />} />
           <InputField label={"Email"} icon={<MailOutline />} />
-          <InputField label={"Subject"} icon={<TitleOutlined />} />
-          <InputField label={"Message"} icon={<MessageOutlined />} />
-          <div className="send">Send</div>
+          <InputField label={"Chủ đề"} icon={<TitleOutlined />} />
+          <InputField label={"Nội dung"} icon={<MessageOutlined />} />
+          <div className="send">Gửi</div>
         </div>
       </div>
     </div>

@@ -51,7 +51,7 @@
   font-size: 18px;
   margin-right: 1rem;
   cursor: pointer;
-  background: linear-gradient(to right, #a972cb 49%, #fff 50%);
+  background: linear-gradient(to right, #ffc107 49%, #fff 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;
@@ -77,7 +77,7 @@
 
 .menu-item {
   width: 200px;
-  background-color: #964dc4cc;
+  background-color: #ffc107;
   position: absolute;
   bottom: -380%;
   right: 0;
@@ -106,7 +106,7 @@
   padding: 5px 12px;
   margin: 0 5px;
   border: 1px solid var(--main-color);
-  background: linear-gradient(to right, #a972cb 50%, #fff 50%);
+  background: linear-gradient(to right, #ffc107 50%, #fff 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;

@@ -8,14 +8,14 @@
   width: 100%;
   height: 110vh;
   position: relative;
-  background-image: url(../../images/banner.png);
+  background-image: url(../../images/banner2.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .btn-start {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 46%;
   margin: 0 auto;
   text-align: center;
@@ -25,7 +25,7 @@
   text-transform: uppercase;
   font-size: 22px;
   cursor: pointer;
-  background: linear-gradient(to left, #a972cb 50%, #66c887 50%);
+  background: linear-gradient(to left, #ffc107 50%, #66c887 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;
@@ -35,7 +35,7 @@
   background-position: left bottom;
 }
 
-.main-banner__title {
+/* .main-banner__title {
   position: absolute;
   bottom: 80px;
   left: 30%;
@@ -53,14 +53,12 @@
 }
 .main-banner__title h1:nth-child(2n) {
   color: var(--main-color);
-}
+} */
 
 .main-banner__titleBot {
-  position: absolute;
-  bottom: -50px;
-  left: 20%;
-  margin: 0 auto;
+  margin: 30px auto;
   text-align: center;
+  color: var(--txt-black) !important;
 }
 
 .main-banner__titleBot {
@@ -68,6 +66,7 @@
   font-size: 28px;
   font-weight: 600;
   margin-top: 20px;
+  line-height: 50px;
 }
 
 /* stats */
@@ -96,7 +95,7 @@
 
 /* why-quizzy */
 .why-quizzy {
-  padding: 3rem 5rem;
+  padding: 3rem 5rem 0 3rem;
   width: 100%;
   background-color: var(--bg-gray);
 }
@@ -113,6 +112,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.why-quizzy .see-more {
+  font-style: 20px;
+  padding-top: 5rem;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /* contact-us */
@@ -149,9 +156,9 @@
   margin-left: 8px;
   margin-top: 16px;
   cursor: pointer;
-  background: #a972cb;
+  background: #ffc107;
   display: block;
-  background: linear-gradient(to left, #a972cb 50%, #66c887 50%);
+  background: linear-gradient(to left, #ffc107 50%, #66c887 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;

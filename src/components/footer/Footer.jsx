@@ -12,35 +12,39 @@ function Footer() {
               className="mr-2 h-10 rounded-full bg-white"
               alt="Logo"
             />
-            <span className="self-center whitespace-nowrap text-3xl font-semibold">
+            <span className="self-center whitespace-nowrap text-4xl font-semibold">
               Quizzy
             </span>
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
           <div>
-            <h2 className="mb-6 text-sm font-semibold uppercase">Resources</h2>
+            <h2 className="mb-6 text-[20px] font-semibold uppercase">
+              Resources
+            </h2>
             <ul>
               <li className="mb-4">
-                <Link to="quizzes" className="hover:underline">
+                <Link to="quizzes" className="hover:underline text-[18px]">
                   Quizzes
                 </Link>
               </li>
               <li>
-                <Link to="learn" className="hover:underline">
+                <Link to="learn" className="hover:underline text-[18px]">
                   Learn
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold uppercase ">Follow us</h2>
+            <h2 className="mb-6 text-[20px] font-semibold uppercase ">
+              Follow us
+            </h2>
             <ul>
               <li className="mb-4">
                 <a
                   href="https://fonts.google.com/"
                   target="_blank"
-                  className="hover:underline "
+                  className="hover:underline text-[18px]"
                   rel="noreferrer"
                 >
                   Github
@@ -50,7 +54,7 @@ function Footer() {
                 <a
                   href="https://www.linkedin.com/in/s4shibam/"
                   target="_blank"
-                  className="hover:underline"
+                  className="hover:underline text-[18px]"
                   rel="noreferrer"
                 >
                   LinkedIn
@@ -59,15 +63,15 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold uppercase ">Legal</h2>
+            <h2 className="mb-6 text-[20px] font-semibold uppercase ">Legal</h2>
             <ul>
               <li className="mb-4">
-                <a href="/" className="hover:underline">
+                <a href="/" className="hover:underline text-[18px]">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="/" className="hover:underline">
+                <a href="/" className="hover:underline text-[18px]">
                   Terms &amp; Conditions
                 </a>
               </li>

@@ -122,6 +122,16 @@ export default function QuizMain() {
     } else {
       setTopics("computer_technology");
     }
+
+    if (currentQuestion === 4) {
+      alert(
+        "Bạn đã hoàn thành bộ câu hỏi 'Kiến Thức Chung' nhấn OK để bắt đầu bộ câu hỏi về 'Toán Học'."
+      );
+    } else if (currentQuestion === 9) {
+      alert(
+        "Bạn đã hoàn thành bộ câu hỏi 'Toán học' nhấn OK để bắt đầu bộ câu hỏi về 'Công nghệ máy tính'."
+      );
+    }
   }, [currentQuestion, listQuiz]);
 
   // progress percentage
@@ -184,7 +194,7 @@ export default function QuizMain() {
         }
       });
 
-      const totalPoint = Math.floor(
+      const totalPoint = Math.ceil(
         (correctGeneralAnswersCount +
           correctMathAnswersCount +
           correcTechnologyAnswersCount) *
@@ -234,25 +244,25 @@ export default function QuizMain() {
           <div className="quiz-main__top">
             <Button
               variant="contained"
-              color="secondary"
+              color="warning"
               disabled={topics !== "general_knowledge"}
             >
-              General Knowledge
+              Kiến thức chung
             </Button>
             <Button
               variant="contained"
-              color="secondary"
+              color="warning"
               disabled={topics !== "mathematics"}
               sx={{ mx: 2 }}
             >
-              Mathematics
+              Toán học
             </Button>
             <Button
               variant="contained"
-              color="secondary"
+              color="warning"
               disabled={topics !== "computer_technology"}
             >
-              Computer Technology
+              Công nghệ máy tính
             </Button>
           </div>
 

@@ -30,9 +30,9 @@ export default function Header() {
       </div>
       <div className="header-right">
         <div className="header-right__menu">
-          <p onClick={() => navigate("/")}>home</p>
-          <p onClick={() => navigate("/quiz")}>quizzies</p>
-          <p onClick={() => navigate("/about")}>about</p>
+          <p onClick={() => navigate("/")}>trang chủ</p>
+          <p onClick={() => navigate("/quiz")}>câu hỏi</p>
+          <p onClick={() => navigate("/about")}>về chúng tôi</p>
         </div>
         <div className="header-right__icon">
           {user ? (
@@ -41,15 +41,15 @@ export default function Header() {
               <div className="menu-item">
                 <p>
                   <Person2Outlined sx={{ mr: 1 }} />
-                  <span>My Profile</span>
+                  <span>Thông tin</span>
                 </p>
                 <p>
                   <HistoryOutlined sx={{ mr: 1 }} />
-                  <span>Submissions</span>
+                  <span>Bài nộp</span>
                 </p>
                 <p onClick={handleLogout}>
                   <LogoutOutlined sx={{ mr: 1 }} />
-                  <span>Logout</span>
+                  <span>Đăng xuất</span>
                 </p>
               </div>
             </p>
@@ -61,7 +61,7 @@ export default function Header() {
                 onClick={() => navigate("/login")}
               >
                 <LoginOutlined sx={{ mr: 1 }} />
-                Log In
+                Đăng nhập
               </button>
               <button
                 type="button"
@@ -69,7 +69,7 @@ export default function Header() {
                 onClick={() => navigate("/signup")}
               >
                 <PersonAddOutlined sx={{ ml: 1 }} />
-                Sign up
+                Đăng ký
               </button>
             </div>
           )}

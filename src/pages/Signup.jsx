@@ -44,7 +44,7 @@ export default function Signup() {
     <div>
       <Header />
       <div className="signup-page">
-        <h1 className="signup-page__title">CREATE AN ACCOUNT!</h1>
+        <h1 className="signup-page__title">TẠO MỚI TÀI KHOẢN QUIZZY!</h1>
         <div className="signup-page__main">
           <img src={signupImage} alt="Signup" />
           <div>
@@ -60,7 +60,7 @@ export default function Signup() {
             >
               <FormControl sx={{ width: "100%", my: 2 }} variant="outlined">
                 <InputLabel htmlFor="outlined-adornment-username">
-                  Username
+                  Tên đăng nhập
                 </InputLabel>
                 <OutlinedInput
                   id="outlined-adornment-username"
@@ -76,7 +76,7 @@ export default function Signup() {
                       </IconButton>
                     </InputAdornment>
                   }
-                  label="Email"
+                  label="Tên đăng nhập"
                 />
               </FormControl>
               <FormControl sx={{ width: "100%", my: 2 }} variant="outlined">
@@ -102,7 +102,7 @@ export default function Signup() {
               </FormControl>
               <FormControl sx={{ width: "100%", my: 2 }} variant="outlined">
                 <InputLabel htmlFor="outlined-adornment-password">
-                  Password
+                  Mật khẩu
                 </InputLabel>
                 <OutlinedInput
                   id="outlined-adornment-password"
@@ -123,12 +123,12 @@ export default function Signup() {
                       </IconButton>
                     </InputAdornment>
                   }
-                  label="Password"
+                  label="Mật khẩu"
                 />
               </FormControl>
               <FormControl sx={{ width: "100%", my: 2 }} variant="outlined">
                 <InputLabel htmlFor="outlined-adornment-confirmPass">
-                  Confirm password
+                  Xác nhận mật khẩu
                 </InputLabel>
                 <OutlinedInput
                   id="outlined-adornment-confirmPass"
@@ -147,14 +147,14 @@ export default function Signup() {
                       </IconButton>
                     </InputAdornment>
                   }
-                  label="Confirm password"
+                  label="Xác nhận mật khẩu"
                 />
               </FormControl>
               <div className="signup-btn" onClick={handleSignup}>
-                sign up
+                đăng ký
               </div>
               <div className="user-login">
-                Already have an account?
+                Bạn đã có tài khoản?
                 <Link to="/login">
                   <span
                     style={{
@@ -163,10 +163,10 @@ export default function Signup() {
                     }}
                   >
                     {" "}
-                    Login{" "}
+                    Đăng nhập{" "}
                   </span>
                 </Link>
-                instead.
+                ngay.
               </div>
             </Box>
           </div>

@@ -5,7 +5,7 @@
   margin: 0 20px;
   text-align: center;
   border-radius: 5px;
-  border-bottom: 4px solid var(--main-color);
+  border-bottom: 4px solid #ffc107;
 }
 
 .quiz-card__icon {

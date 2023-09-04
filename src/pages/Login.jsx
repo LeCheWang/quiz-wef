@@ -43,7 +43,7 @@ export default function Login() {
     <div>
       <Header />
       <div className="login-page">
-        <h1 className="login-page__title">LOG IN TO QUIZZY!</h1>
+        <h1 className="login-page__title">ĐĂNG NHẬP CHƠI QUIZZY NGAY!</h1>
         <div className="login-page__main">
           <img src={login} alt="Log In" />
           <div>
@@ -80,7 +80,7 @@ export default function Login() {
               </FormControl>
               <FormControl sx={{ width: "100%", my: 2 }} variant="outlined">
                 <InputLabel htmlFor="outlined-adornment-password">
-                  Password
+                  Mật khẩu
                 </InputLabel>
                 <OutlinedInput
                   id="outlined-adornment-password"
@@ -101,19 +101,19 @@ export default function Login() {
                       </IconButton>
                     </InputAdornment>
                   }
-                  label="Password"
+                  label="Mật khẩu"
                 />
               </FormControl>
               <Typography
                 sx={{ textAlign: "right", color: "#3b82f6", fontSize: "18px" }}
               >
-                Forgot Password?
+                Quên mật khẩu?
               </Typography>
               <div className="login-btn" onClick={handleLogin}>
-                log in
+                đăng nhập
               </div>
               <div className="user-signup">
-                Don&apos;t have an account?
+                Bạn chưa có tài khoản?
                 <Link to="/signup">
                   <span
                     style={{
@@ -122,10 +122,10 @@ export default function Login() {
                     }}
                   >
                     {" "}
-                    Sign Up{" "}
+                    Đăng ký{" "}
                   </span>
                 </Link>
-                instead.
+                ngay.
               </div>
             </Box>
           </div>

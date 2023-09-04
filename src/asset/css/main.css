@@ -26,7 +26,8 @@
   --black-color: #000;
   --red-color: red;
   --green-color: #78e08f;
-  --purple-color: #a972cbcc;
+  /* --purple-color: #a972cbcc; */
+  --purple-color: #ffc107;
 
   --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   --box-shadow-light: rgba(0, 0, 0, 0.24) 0px 3px 8px;

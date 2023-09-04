@@ -19,7 +19,7 @@ function ProgressBar({ nextQ, prevQ, progress, submit }) {
             color="error"
             startIcon={<ArrowBackIos />}
           >
-            Go back
+            Quay lại
           </Button>
         </Box>
       </button>
@@ -43,10 +43,10 @@ function ProgressBar({ nextQ, prevQ, progress, submit }) {
         <Box>
           <Button
             variant="contained"
-            color={progress === 100 ? "success" : "secondary"}
+            color={progress === 100 ? "success" : "warning"}
             endIcon={progress === 100 ? <CheckCircle /> : <ArrowForwardIos />}
           >
-            {progress === 100 ? "Submit Quiz" : "Next Question"}
+            {progress === 100 ? "Nộp bài" : "Câu tiếp"}
           </Button>
         </Box>
       </button>
